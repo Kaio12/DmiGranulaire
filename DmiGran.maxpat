@@ -15,6 +15,168 @@
 		"gridsize" : [ 15.0, 15.0 ],
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-42",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patcher" : 					{
+						"fileversion" : 1,
+						"appversion" : 						{
+							"major" : 9,
+							"minor" : 0,
+							"revision" : 4,
+							"architecture" : "x64",
+							"modernui" : 1
+						}
+,
+						"classnamespace" : "box",
+						"rect" : [ 54.0, 151.0, 501.0, 755.0 ],
+						"gridsize" : [ 15.0, 15.0 ],
+						"visible" : 1,
+						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-4",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 171.0, 56.0, 105.0, 22.0 ],
+									"saved_object_attributes" : 									{
+										"dirtypatcher" : 1,
+										"embed" : 0,
+										"externalfiles" : 1,
+										"parameter_enable" : 0,
+										"parameter_mappable" : 0,
+										"resamplefiles" : 0,
+										"savegui" : 0,
+										"snaprate" : 1000.0,
+										"verbose" : 1
+									}
+,
+									"text" : "mubu echantillons"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-3",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 11.0, 19.0, 60.0, 22.0 ],
+									"text" : "dispatche"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"filename" : "construcGrille.js",
+									"id" : "obj-1",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 11.0, 58.0, 110.0, 22.0 ],
+									"saved_object_attributes" : 									{
+										"parameter_enable" : 0
+									}
+,
+									"text" : "v8 construcGrille.js",
+									"textfile" : 									{
+										"filename" : "construcGrille.js",
+										"flags" : 0,
+										"embed" : 0,
+										"autowatch" : 1
+									}
+
+								}
+
+							}
+ ],
+						"lines" : [ 							{
+								"patchline" : 								{
+									"destination" : [ "obj-1", 0 ],
+									"source" : [ "obj-3", 0 ]
+								}
+
+							}
+ ],
+						"originid" : "pat-26",
+						"toolbaradditions" : [ "packagemanager" ]
+					}
+,
+					"patching_rect" : [ 190.210000000000008, 67.590000000000003, 95.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"globalpatchername" : ""
+					}
+,
+					"text" : "p constructGrille"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-76",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 982.0, 791.0, 162.0, 22.0 ],
+					"text" : "0.270905 0.615251"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-77",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 982.0, 758.0, 57.0, 22.0 ],
+					"text" : "v bounds"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-75",
+					"maxclass" : "button",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 762.0, 725.0, 24.0, 24.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-73",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 807.0, 791.0, 162.0, 22.0 ],
+					"text" : "2917.034348 8292.035918"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-71",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 807.0, 758.0, 57.0, 22.0 ],
+					"text" : "v domain"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-70",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -145,7 +307,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 304.5, 893.636331677436829, 50.0, 22.0 ],
-					"text" : "21799."
+					"text" : "956."
 				}
 
 			}
@@ -234,7 +396,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 534.0, 100.0, 712.0, 779.0 ],
+						"rect" : [ 534.0, 100.0, 558.0, 427.0 ],
 						"gridsize" : [ 15.0, 15.0 ],
 						"boxes" : [ 							{
 								"box" : 								{
@@ -361,7 +523,7 @@
 
 							}
  ],
-						"originid" : "pat-37",
+						"originid" : "pat-28",
 						"toolbaradditions" : [ "packagemanager" ]
 					}
 ,
@@ -400,13 +562,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-37",
-					"linecount" : 2,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 306.0, 372.0, 59.0, 35.0 ],
-					"text" : "52 51 30 38"
+					"patching_rect" : [ 306.0, 372.0, 59.0, 22.0 ],
+					"text" : "4 18 3 20"
 				}
 
 			}
@@ -430,7 +591,6 @@
 						"classnamespace" : "box",
 						"rect" : [ 59.0, 119.0, 903.0, 755.0 ],
 						"gridsize" : [ 15.0, 15.0 ],
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"bgcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
@@ -453,7 +613,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 736.0, 654.0, 69.0, 33.0 ],
-									"presentation_linecount" : 2,
 									"text" : "bounds Y (bounds)"
 								}
 
@@ -466,7 +625,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 465.0, 654.0, 66.0, 33.0 ],
-									"presentation_linecount" : 2,
 									"text" : "bounds X (domain)"
 								}
 
@@ -1267,7 +1425,7 @@
 
 							}
  ],
-						"originid" : "pat-41",
+						"originid" : "pat-32",
 						"toolbaradditions" : [ "packagemanager" ]
 					}
 ,
@@ -1599,7 +1757,7 @@
 
 							}
  ],
-						"originid" : "pat-43",
+						"originid" : "pat-34",
 						"toolbaradditions" : [ "packagemanager" ]
 					}
 ,
@@ -2245,7 +2403,7 @@
 
 							}
  ],
-						"originid" : "pat-45",
+						"originid" : "pat-36",
 						"toolbaradditions" : [ "packagemanager" ]
 					}
 ,
@@ -2903,7 +3061,7 @@
 
 							}
  ],
-						"originid" : "pat-47",
+						"originid" : "pat-38",
 						"toolbaradditions" : [ "packagemanager" ]
 					}
 ,
@@ -2988,7 +3146,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1179.0, 704.0, 248.0, 22.0 ],
-					"text" : "mouse exit 27.104487 3033.392172"
+					"text" : "foremost 6"
 				}
 
 			}
@@ -3000,7 +3158,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 308.0, 212.0, 138.0, 22.0 ],
-					"text" : "55.89655 3033.392172"
+					"text" : "4503.379124 0.20988"
 				}
 
 			}
@@ -3259,7 +3417,7 @@
 					"cursor_nearest" : 1,
 					"cursor_nearestcolor" : [ 1.0, 0.0, 0.0, 1.0 ],
 					"cursor_noringoffset" : 0,
-					"cursor_position" : [ 30.703494810313813, 3033.392172413074604 ],
+					"cursor_position" : [ 4480.831214488636761, 0.208585739135742 ],
 					"cursor_shape" : "cross",
 					"cursor_size" : 4,
 					"cursor_sizeunit" : 0,
@@ -3271,7 +3429,7 @@
 					"cursor_symbolwidth" : 16.0,
 					"cursor_visible" : 1,
 					"dirtypatcher" : 1,
-					"domain_bounds" : [ 30.703494810313813, 2740.756427553851154 ],
+					"domain_bounds" : [ 0.0, 1.0 ],
 					"domainruler_bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"domainruler_fgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"domainruler_grid" : 0,
@@ -3284,7 +3442,7 @@
 					"domainscrollbar_visible" : 0,
 					"embed" : 0,
 					"externalfiles" : 1,
-					"foremost" : 4,
+					"foremost" : 6,
 					"freeze" : 0,
 					"id" : "obj-1",
 					"layout" : 0,
@@ -3341,7 +3499,7 @@
 		"lines" : [ 			{
 				"patchline" : 				{
 					"destination" : [ "obj-133", 0 ],
-					"order" : 1,
+					"order" : 2,
 					"source" : [ "obj-1", 0 ]
 				}
 
@@ -3349,7 +3507,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-46", 1 ],
-					"order" : 0,
+					"order" : 1,
 					"source" : [ "obj-1", 0 ]
 				}
 
@@ -3839,6 +3997,36 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-73", 1 ],
+					"source" : [ "obj-71", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-71", 0 ],
+					"order" : 1,
+					"source" : [ "obj-75", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-77", 0 ],
+					"order" : 0,
+					"source" : [ "obj-75", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-76", 1 ],
+					"source" : [ "obj-77", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
 					"order" : 1,
 					"source" : [ "obj-8", 0 ]
@@ -3875,7 +4063,7 @@
 
 			}
  ],
-		"originid" : "pat-35",
+		"originid" : "pat-24",
 		"parameters" : 		{
 			"obj-43" : [ "live.gain~", "live.gain~", 0 ],
 			"parameterbanks" : 			{
@@ -3891,6 +4079,13 @@
 		}
 ,
 		"dependency_cache" : [ 			{
+				"name" : "construcGrille.js",
+				"bootpath" : "~/Documents/programmation/max/DmiGranulaire",
+				"patcherrelativepath" : ".",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "constructPartials11.js",
 				"bootpath" : "~/Documents/programmation/max/DmiGranulaire",
 				"patcherrelativepath" : ".",
