@@ -22,13 +22,15 @@ if (mubu != null)
                 var descr = mubu.gettrack(1, "descr"); // se réfère à descr
                 if(descr != null)
                         {
-
+                        
+                        var markers = mubu.gettrack(1, "markers"); // se réfère à la piste markers
+                        
                         post("distribute ok\n");
                         post("cols ", distribute.mxcols, "\n");
                         post("rows ", distribute.mxrows, "\n");
 
-                        var config = " @name dispatchGrains @matrixcolnames Pad DistX DistY maxLoudTime Periodicity ";
-	                grille = mubu.addtrack(1000, 5, 1, config);//(maxsize, mxrows, mxcols, configsym
+                        var config = " @name dispatchGrains @matrixcolnames pad begin maxLoudTime periodicity ";
+	                grille = mubu.addtrack(1000, 4, 1, config);//(maxsize, mxrows, mxcols, configsym
                         grille.clear(); // on efface préalablement la piste partielsSynth à l'appel de la fonction
         
                         var DistX = [];
@@ -39,9 +41,10 @@ if (mubu != null)
                         var maxY = 0;
                         var maxLoudTime = 0;
                         var Periodicity = 0;
-                        var indice = 0;
+                        var pad = 0;
                         var indX = 0;
                         var indY = 0;
+                        var timetag = 0;
 
                         DistX = distribute.getmxcolumn(1); // récupère les positions x des grains
                         DistY = distribute.getmxcolumn(2); // récupère les positions y des grains
@@ -55,7 +58,8 @@ if (mubu != null)
                         maxY = Math.max(...DistY);
         
                         for (let i = 0; i < DistX.length; i++)
-                                {   
+                                {
+                                timetag = markers.gettime (i);   
                                 maxLoudTime = partielsSynth.gettime(i);
                                 post("maxLoudTime", maxLoudTime, "\n");
                                 Periodicity = descr.getmxcolumn(3)[i]; // récupère Periodicity de descr -> qualité noise/périodicité
@@ -64,10 +68,10 @@ if (mubu != null)
                                 if(indX > 8) indX = 8; // on ne peut pas dépasser 8, pour le grain qui est à la position max
                                 indY = Math.trunc(((DistY[i] - minY) / (maxY - minY)) * 8) + 1;
                                 if(indY > 8) indY = 8;
-                                indice = indY * 10 + indX; // construit la correspondance avec la note midi sur le launchpad
-                                post("indice", indice, "\n");
+                                pad = indY * 10 + indX; // construit la correspondance avec la note midi sur le launchpad
+                                post("indice", pad, "\n");
                                 post("DistX", DistX[i], "DistY", DistY[i], "\n");
-                                grille.append(indice, DistX[i], DistY[i], maxLoudTime, Periodicity);
+                                grille.append(pad, timetag, maxLoudTime, Periodicity);
                                 }   
                         }
 
