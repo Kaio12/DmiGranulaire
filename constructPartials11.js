@@ -1,6 +1,9 @@
 // Description:
 
 
+
+
+
 //renvoie l'index de l'élément du tableau ayant la valeur maximum.					
 function maxi(arr, inddeb){
 	let result = 0;
@@ -64,4 +67,5 @@ if (mubu != null)
         track.append(matrice); // on les met dans la piste partielsSynth
         }
     }
+    outlet(0, "bang");
 }
