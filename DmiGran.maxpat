@@ -32,7 +32,6 @@
 						"classnamespace" : "box",
 						"rect" : [ -1471.0, 236.0, 800.0, 801.0 ],
 						"gridsize" : [ 15.0, 15.0 ],
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-16",
@@ -961,7 +960,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 306.0, 372.0, 59.0, 22.0 ],
-					"text" : "15 3 2 16"
+					"text" : "3 15 6 2"
 				}
 
 			}
@@ -982,8 +981,9 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ -1717.0, 87.0, 1484.0, 900.0 ],
+						"rect" : [ -1730.0, 87.0, 1484.0, 900.0 ],
 						"gridsize" : [ 15.0, 15.0 ],
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-36",
@@ -1003,20 +1003,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 192.0, 219.0, 29.5, 22.0 ],
+									"patching_rect" : [ 34.0, 263.0, 29.5, 22.0 ],
 									"text" : "> 0"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-28",
-									"maxclass" : "toggle",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "int" ],
-									"parameter_enable" : 0,
-									"patching_rect" : [ 132.0, 304.0, 24.0, 24.0 ]
 								}
 
 							}
@@ -1194,8 +1182,8 @@
 									"patching_rect" : [ 816.0, 573.0, 110.0, 35.0 ],
 									"sample_format" : 1,
 									"serial_number" : "K5J63M669M64 bits",
-									"sourcecode" : "//crée une puls de duree duree en ms sur front descendant.\nimport (\"stdfaust.lib\");\ndel = (hslider(\"duree\", 0., 0., 1000., 1.)/1000):ba.sec2samp;\nprocess= _  <:   (_'-_) > 0:ba.spulse(del):en.asr(0.02, 1, 0.02);",
-									"sourcecode_size" : 212,
+									"sourcecode" : "//crée une enveloppe de duree duree en ms sur front descendant.\nimport (\"stdfaust.lib\");\ndel = (hslider(\"duree\", 0., 0., 1000., 1.)/1000):ba.sec2samp;\nprocess= _  <:   (_'-_) > 0:ba.spulse(del):en.asr(0.02, 1, 0.02);",
+									"sourcecode_size" : 217,
 									"text" : "faustgen~ pulseFrontDesc",
 									"varname" : "faustgen-4546876832",
 									"version" : "1.73"
@@ -1695,7 +1683,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 347.0, 203.0, 50.0, 22.0 ]
+									"patching_rect" : [ 312.0, 223.0, 50.0, 22.0 ]
 								}
 
 							}
@@ -2087,13 +2075,6 @@
 									"destination" : [ "obj-36", 1 ],
 									"order" : 0,
 									"source" : [ "obj-27", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-198", 0 ],
-									"source" : [ "obj-28", 0 ]
 								}
 
 							}
@@ -4005,7 +3986,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1179.0, 704.0, 248.0, 22.0 ],
-					"text" : "mouse exit 1827.112717 0.685231"
+					"text" : "mouse exit 1458.79643 0.632489"
 				}
 
 			}
@@ -4017,7 +3998,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 308.0, 212.0, 138.0, 22.0 ],
-					"text" : "2006.988112 0.669408"
+					"text" : "1544.451381 0.628972"
 				}
 
 			}
@@ -4275,7 +4256,7 @@
 					"cursor_nearest" : 1,
 					"cursor_nearestcolor" : [ 1.0, 0.0, 0.0, 1.0 ],
 					"cursor_noringoffset" : 0,
-					"cursor_position" : [ 1827.112716640879398, 0.685231299905031 ],
+					"cursor_position" : [ 1501.623905555524516, 0.632488600804459 ],
 					"cursor_shape" : "cross",
 					"cursor_size" : 4,
 					"cursor_sizeunit" : 0,
