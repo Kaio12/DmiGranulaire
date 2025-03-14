@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -1689.0, 97.0, 1486.0, 795.0 ],
+		"rect" : [ 34.0, 153.0, 1444.0, 795.0 ],
 		"openinpresentation" : 1,
 		"gridsize" : [ 15.0, 15.0 ],
 		"boxes" : [ 			{
@@ -243,7 +243,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 223.0, 353.0, 103.0, 22.0 ],
-									"text" : "1. 0.780497 0. 1."
+									"text" : "0.207039 0. 1. 1."
 								}
 
 							}
@@ -469,7 +469,7 @@
 
 							}
  ],
-						"originid" : "pat-6",
+						"originid" : "pat-44",
 						"toolbaradditions" : [ "packagemanager" ]
 					}
 ,
@@ -637,7 +637,7 @@
 
 							}
  ],
-						"originid" : "pat-10",
+						"originid" : "pat-46",
 						"toolbaradditions" : [ "packagemanager" ]
 					}
 ,
@@ -920,7 +920,7 @@
 
 							}
  ],
-						"originid" : "pat-12",
+						"originid" : "pat-48",
 						"toolbaradditions" : [ "packagemanager" ]
 					}
 ,
@@ -960,7 +960,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 306.0, 372.0, 59.0, 22.0 ],
-					"text" : "3 15 6 2"
+					"text" : "11 0 1 7"
 				}
 
 			}
@@ -981,7 +981,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ -1730.0, 87.0, 1484.0, 900.0 ],
+						"rect" : [ 34.0, 100.0, 1444.0, 848.0 ],
 						"gridsize" : [ 15.0, 15.0 ],
 						"visible" : 1,
 						"boxes" : [ 							{
@@ -992,7 +992,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 353.0, 540.0, 99.0, 22.0 ],
-									"text" : "duree 84.666664"
+									"text" : "duree 21.666666"
 								}
 
 							}
@@ -1005,16 +1005,6 @@
 									"outlettype" : [ "int" ],
 									"patching_rect" : [ 34.0, 263.0, 29.5, 22.0 ],
 									"text" : "> 0"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-16",
-									"maxclass" : "scope~",
-									"numinlets" : 2,
-									"numoutlets" : 0,
-									"patching_rect" : [ 273.0, 764.0, 130.0, 130.0 ]
 								}
 
 							}
@@ -1097,7 +1087,7 @@
 									"sourcecode" : "//construit une rampe qui commence à begin et termine à end en end-begin ms sur front montant\nimport (\"stdfaust.lib\");\nbegin = hslider(\"begin\", 0, 0, 5000, 1)/1000;\nend = hslider(\"end\", 0, 0, 5000, 1)/1000;\nbeginSamp = begin:ba.sec2samp;\nendSamp = end:ba.sec2samp;\nf(x) = x  : ba.bpf.start(0,begin) : ba.bpf.end(endSamp-beginSamp,end);\nfront = _ <: (_'-_) > 0:ba.spulse(endSamp - beginSamp);\nprocess = front:*~+(1):f: *(1000);",
 									"sourcecode_size" : 428,
 									"text" : "faustgen~ phaseLecturefrontDesc",
-									"varname" : "faustgen-4546843520",
+									"varname" : "faustgen-4425727408",
 									"version" : "1.73"
 								}
 
@@ -1130,7 +1120,7 @@
 									"sourcecode" : "//construit une rampe qui commence à begin et termine à end en end-begin ms sur front montant\nimport (\"stdfaust.lib\");\nbegin = hslider(\"begin\", 0, 0, 5000, 0.000001)/1000;\nend = hslider(\"end\", 0, 0, 5000, 0.000001)/1000;\nbeginSamp = begin:ba.sec2samp;\nendSamp = end:ba.sec2samp;\nf(x) = x  : ba.bpf.start(0,begin) : ba.bpf.end(endSamp-beginSamp,end);\nfront = _ <: (_'-_) < 0:ba.spulse(endSamp - beginSamp);\nprocess = front:*~+(1):f: *(1000);",
 									"sourcecode_size" : 442,
 									"text" : "faustgen~ phaseLecture",
-									"varname" : "faustgen-4546854688",
+									"varname" : "faustgen-4425738640",
 									"version" : "1.73"
 								}
 
@@ -1151,7 +1141,7 @@
 									"sourcecode" : "import(\"stdfaust.lib\");\nprocess=_,_;",
 									"sourcecode_size" : 36,
 									"text" : "faustgen~ envelopes",
-									"varname" : "faustgen-4546864752",
+									"varname" : "faustgen-4425748448",
 									"version" : "1.73"
 								}
 
@@ -1185,7 +1175,7 @@
 									"sourcecode" : "//crée une enveloppe de duree duree en ms sur front descendant.\nimport (\"stdfaust.lib\");\ndel = (hslider(\"duree\", 0., 0., 1000., 1.)/1000):ba.sec2samp;\nprocess= _  <:   (_'-_) > 0:ba.spulse(del):en.asr(0.02, 1, 0.02);",
 									"sourcecode_size" : 217,
 									"text" : "faustgen~ pulseFrontDesc",
-									"varname" : "faustgen-4546876832",
+									"varname" : "faustgen-4425761392",
 									"version" : "1.73"
 								}
 
@@ -1243,7 +1233,7 @@
 									"sourcecode" : "//crée une enveloppe asr de durée duree en ms sur front montant\nimport (\"stdfaust.lib\");\ndel = (hslider(\"duree\", 0, 0, 1000, 1)/1000):ba.sec2samp;\nprocess= _  <:   (_'-_) < 0: ba.spulse(del): en.asr(0.02,1, 0.02);",
 									"sourcecode_size" : 215,
 									"text" : "faustgen~ envelopeFrontMontant",
-									"varname" : "faustgen-5012721248",
+									"varname" : "faustgen-4425770272",
 									"version" : "1.73"
 								}
 
@@ -1256,7 +1246,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 1190.0, 126.0, 30.0, 30.0 ]
+									"patching_rect" : [ 131.0, 269.0, 30.0, 30.0 ]
 								}
 
 							}
@@ -1267,7 +1257,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 1190.0, 180.0, 48.0, 22.0 ],
+									"patching_rect" : [ 131.0, 323.0, 48.0, 22.0 ],
 									"text" : "mute~"
 								}
 
@@ -1413,11 +1403,11 @@
 
 											}
  ],
-										"originid" : "pat-18",
+										"originid" : "pat-54",
 										"toolbaradditions" : [ "packagemanager" ]
 									}
 ,
-									"patching_rect" : [ 1190.0, 210.0, 57.0, 22.0 ],
+									"patching_rect" : [ 131.0, 353.0, 57.0, 22.0 ],
 									"text" : "p visu"
 								}
 
@@ -1478,7 +1468,7 @@
 									"sourcecode" : "//enveloppe dont l'attaque est décalée de decalee secondes\n//attaque et release de 20 ms\n\nimport (\"stdfaust.lib\");\ndecalee = (hslider(\"decalee\", 20, 0., 1000., 0.001)/1000) :ba.sec2samp;\nt = _<: _@(decalee), _ :*;\nprocess= t:en.asr(0.02, 1,0.02);\n",
 									"sourcecode_size" : 249,
 									"text" : "faustgen~ envelopeRetard",
-									"varname" : "faustgen-4544928624",
+									"varname" : "faustgen-5245882704",
 									"version" : "1.73"
 								}
 
@@ -1602,7 +1592,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 593.0, 308.0, 440.0, 22.0 ],
-									"text" : "988.333313 84.666664 1073. 85.333336 1158.333374 0."
+									"text" : "1745.333374 21.666666 1767. 309.333344 2076.333252 0.269319"
 								}
 
 							}
@@ -2255,16 +2245,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-16", 0 ],
-									"order" : 1,
-									"source" : [ "obj-9", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
 									"destination" : [ "obj-19", 1 ],
-									"order" : 0,
 									"source" : [ "obj-9", 0 ]
 								}
 
@@ -2284,7 +2265,7 @@
 
 							}
  ],
-						"originid" : "pat-16",
+						"originid" : "pat-52",
 						"toolbaradditions" : [ "packagemanager" ]
 					}
 ,
@@ -2612,7 +2593,7 @@
 
 							}
  ],
-						"originid" : "pat-20",
+						"originid" : "pat-56",
 						"toolbaradditions" : [ "packagemanager" ]
 					}
 ,
@@ -3253,7 +3234,7 @@
 
 							}
  ],
-						"originid" : "pat-22",
+						"originid" : "pat-58",
 						"toolbaradditions" : [ "packagemanager" ]
 					}
 ,
@@ -3905,7 +3886,7 @@
 
 							}
  ],
-						"originid" : "pat-24",
+						"originid" : "pat-60",
 						"toolbaradditions" : [ "packagemanager" ]
 					}
 ,
@@ -3986,7 +3967,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1179.0, 704.0, 248.0, 22.0 ],
-					"text" : "mouse exit 1458.79643 0.632489"
+					"text" : "mouse exit 1987.765489 0.544273"
 				}
 
 			}
@@ -3998,7 +3979,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 308.0, 212.0, 138.0, 22.0 ],
-					"text" : "1544.451381 0.628972"
+					"text" : "3408.10135 0.413658"
 				}
 
 			}
@@ -4256,7 +4237,7 @@
 					"cursor_nearest" : 1,
 					"cursor_nearestcolor" : [ 1.0, 0.0, 0.0, 1.0 ],
 					"cursor_noringoffset" : 0,
-					"cursor_position" : [ 1501.623905555524516, 0.632488600804459 ],
+					"cursor_position" : [ 2830.246972011242178, 0.544272711255849 ],
 					"cursor_shape" : "cross",
 					"cursor_size" : 4,
 					"cursor_sizeunit" : 0,
@@ -4268,7 +4249,7 @@
 					"cursor_symbolwidth" : 16.0,
 					"cursor_visible" : 1,
 					"dirtypatcher" : 1,
-					"domain_bounds" : [ 1501.623905555524516, 7951.441662062687101 ],
+					"domain_bounds" : [ 2830.246972011242178, 4707.136192199418474 ],
 					"domainruler_bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"domainruler_fgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"domainruler_grid" : 0,
@@ -4834,7 +4815,7 @@
 
 			}
  ],
-		"originid" : "pat-4",
+		"originid" : "pat-42",
 		"parameters" : 		{
 			"obj-133::obj-14" : [ "live.gain~[1]", "live.gain~", 0 ],
 			"obj-133::obj-26" : [ "live.gain~", "live.gain~", 0 ],

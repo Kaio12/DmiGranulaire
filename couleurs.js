@@ -20,8 +20,6 @@ function black(){
 
 function couleurs() {
 
-   
-
     // variable pour mubu utilisée dans le script
     mubu = new MubuJS("echantillons");
     // référence au mubu du patch (echantillons)
